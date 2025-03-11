@@ -7,7 +7,7 @@ const Hero = () => {
   id="início" 
   className="min-h-[80vh] relative flex items-center justify-center overflow-hidden"
   style={{
-    backgroundImage: 'linear-gradient(#134677CC , #134677CC), url("/mesa_podcast.jpeg")',
+    backgroundImage: 'linear-gradient(#134677 , #134677), url("/mesa_podcast.jpeg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   }}
@@ -31,7 +31,7 @@ const Hero = () => {
           </a>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <a href="#serviços" className="text-valor-light/80 hover:text-valor-light">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -48,7 +48,7 @@ const Hero = () => {
               <polyline points="19 12 12 19 5 12"></polyline>
             </svg>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
