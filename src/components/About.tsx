@@ -1,4 +1,3 @@
-
 import { Award, Users, TrendingUp } from 'lucide-react';
 
 const stats = [
