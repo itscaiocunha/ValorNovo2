@@ -1,6 +1,7 @@
 
 import { LightbulbIcon, TrendingUp, FileText, BarChart4, PieChart, ClipboardList } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -8,30 +9,35 @@ const services = [
     title: 'Gestão de Inovação',
     description: 'Consultoria especializada para implementação e otimização de processos de inovação em sua empresa.',
     color: 'bg-blue-50 text-blue-600',
+    path: '/servicos/gestao-inovacao'
   },
   {
     icon: FileText,
-    title: 'Captação de Recursos Finep',
+    title: 'Captação Finep',
     description: 'Elaboração de projetos para captação de recursos não-reembolsáveis e financiamentos com juros reduzidos.',
     color: 'bg-emerald-50 text-emerald-600',
+    path: '/servicos/captacao-finep'
   },
   {
     icon: ClipboardList,
     title: 'Gestão de Projetos',
     description: 'Combinação de metodologias tradicionais e ágeis para gestão eficiente de projetos de inovação.',
     color: 'bg-purple-50 text-purple-600',
+    path: '/servicos/gestao-projetos'
   },
   {
     icon: PieChart,
     title: 'Pesquisas Clínicas',
     description: 'Estudos aprofundados para análise de viabilidade técnica, econômica e financeira de projetos.',
     color: 'bg-red-50 text-red-600',
+    path: '/servicos/pesquisas-clinicas'
   },
   {
     icon: TrendingUp,
-    title: 'Inteligência Estratégica',
+    title: 'Planejamento Estratégico',
     description: 'Análise de mercado, tendências e oportunidades para direcionar investimentos em inovação.',
     color: 'bg-cyan-50 text-cyan-600',
+    path: '/servicos/planejamento-estrategico'
   },
 ];
 
@@ -54,9 +60,10 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
+            <Link 
               key={index}
-              className="glass-card p-8 hover-card-effect reveal"
+              to={service.path}
+              className="glass-card p-8 hover-card-effect reveal block"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={cn("p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6", service.color)}>
@@ -64,7 +71,7 @@ const Services = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4 text-valor-primary">{service.title}</h3>
               <p className="text-valor-dark/80">{service.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
