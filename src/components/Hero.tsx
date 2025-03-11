@@ -7,7 +7,7 @@ const Hero = () => {
   id="início" 
   className="min-h-[80vh] relative flex items-center justify-center overflow-hidden"
   style={{
-    backgroundImage: 'linear-gradient(#134677CC , #134677CC), url("public/mesa_podcast.jpeg")',
+    backgroundImage: 'linear-gradient(#134677CC , #134677CC), url("/mesa_podcast.jpeg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   }}

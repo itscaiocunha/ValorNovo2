@@ -27,7 +27,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="/" className="flex items-center space-x-2">
-          <img src="public/logo_type.svg" alt="" className="h-8 pt-2 pb-1"/>
+          <img src="/logo_type.svg" alt="" className="h-8 pt-2 pb-1"/>
         </a>
 
         {/* Desktop Navigation */}

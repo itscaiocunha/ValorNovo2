@@ -15,7 +15,7 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <a href="/" className="flex items-center space-x-2">
-                <img src="public/logo_markbranco.png" alt="" />
+                <img src="/logo_markbranco.png" alt="" />
               </a>
             </div>
             <p className="text-valor-light/80 mb-6">
