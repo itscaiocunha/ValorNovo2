@@ -3,22 +3,134 @@ import { useState } from 'react';
 import { Play, FileText, BookOpen, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const categories = ['Todos', 'Vídeos', 'Artigos', 'E-books'];
+const categories = ['Todos', 'Podcast', 'E-books'];
 
 const contentItems = [
   {
-    type: 'video',
-    title: 'Como estruturar projetos para FINEP',
-    description: 'Aprenda os fundamentos para estruturar projetos de captação de recursos junto à FINEP.',
-    thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop',
-    date: '10 set 2023',
+    type: 'podcast',
+    title: 'Podcast 8 - NOVA SMAR, com Guilherme Moretti(Governança e Inovação) e Libânio Souza (CEO-Presidente)',
+    description: 'Em breve',
+    thumbnail: 'public/EmBreve08.png',
+    date: '04 abr 2025',
   },
   {
-    type: 'article',
-    title: 'Principais linhas de financiamento para inovação em 2024',
-    description: 'Conheça as principais linhas de financiamento disponíveis para projetos de inovação neste ano.',
-    thumbnail: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop',
-    date: '22 jan 2024',
+    type: 'podcast',
+    title: 'Podcast 9 - SHULL SEMENTES, com Sócrates Dell´Omo (CFO) e Evandrei Rossi (Gerente de Inovação - Corn Breeder)',
+    description: 'Em breve',
+    thumbnail: 'public/EmBreve09.png',
+    date: '04 abr 2025',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 10 - AgroGoods, com Marcelo Alexandre (Sócio e CEO) e Eduardo Marques (Investidor e especialista em IA)',
+    description: 'Em breve',
+    thumbnail: 'public/EmBreve10.png',
+    date: '04 abr 2025',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 1: Fomento a Inovação com captação recurso subsidiado pela VALORNOVO®. - Parte 1 de 3',
+    description: 'Descubra como a VALORNOVO® promove o crescimento da empresa e aumento da rentabilidade do negócio, através de projetos de inovação e captação de recursos subsidiados em FINEP e BNDES.  Aprenda a acessar recursos subsidiados para impulsionar a captação de recursos para inovação. Com José Walter e Marcelo Correia, e insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast11.jpg',
+    date: '04 set 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 1: Fomento a Inovação com captação recurso subsidiado pela VALORNOVO®. - Parte 2 de 3',
+    description: 'Descubra como a VALORNOVO® promove o crescimento da empresa e aumento da rentabilidade do negócio, através de projetos de inovação e captação de recursos subsidiados em FINEP e BNDES.  Aprenda a acessar recursos subsidiados para impulsionar a captação de recursos para inovação. Com José Walter e Marcelo Correia, e insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast12.jpg',
+    date: '04 set 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 1: Fomento a Inovação com captação recurso subsidiado pela VALORNOVO®. - Parte 3 de 3',
+    description: 'Descubra como a VALORNOVO® promove o crescimento da empresa e aumento da rentabilidade do negócio, através de projetos de inovação e captação de recursos subsidiados em FINEP e BNDES.  Aprenda a acessar recursos subsidiados para impulsionar a captação de recursos para inovação. Com José Walter e Marcelo Correia, e insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast13.jpg',
+    date: '04 set 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 2: Inovação na Evolua Educação com Luciano Nogueira -parte 1',
+    description: 'Descubra como a Evolua Educação junto com a VALORNOVO® estão inovando para transformar o ensino no Brasil, com insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast21.jpg',
+    date: '17 out 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 2: Inovação na Evolua Educação com Luciano Nogueira -parte 2',
+    description: 'Descubra como a Evolua Educação junto com a VALORNOVO® estão inovando para transformar o ensino no Brasil, com insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast22.jpg',
+    date: '17 out 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 2: Inovação na Evolua Educação com Luciano Nogueira -parte 3',
+    description: 'Descubra como a Evolua Educação junto com a VALORNOVO® estão inovando para transformar o ensino no Brasil, com insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast23.jpg',
+    date: '17 out 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 3: Inovação na Gestora de Recursos Tarpon 10b com Edsmar Resende- parte 1',
+    description: 'Veja como a Tarpon 10b junto com a VALORNOVO® estão liderando a inovação na gestão de recursos e criando soluções disruptivas para o Agronegócio e setor de alimentos, com insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast31.jpg',
+    date: '26 nov 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 3: Inovação na Gestora de Recursos Tarpon 10b com Edsmar Resende- parte 2',
+    description: 'Veja como a Tarpon 10b junto com a VALORNOVO® estão liderando a inovação na gestão de recursos e criando soluções disruptivas para o Agronegócio e setor de alimentos, com insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast32.jpg',
+    date: '26 nov 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 3: Inovação na Gestora de Recursos Tarpon 10b com Edsmar Resende- parte 3',
+    description: 'Veja como a Tarpon 10b junto com a VALORNOVO® estão liderando a inovação na gestão de recursos e criando soluções disruptivas para o Agronegócio e setor de alimentos, com insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast33.jpg',
+    date: '26 nov 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 4: Inovação na IdeeLab Biotecnologia com Ronaldo Dálio e Gilson Manfio - parte 1',
+    description: 'Conheça a IdeeLab Biotecnologia e saiba com a VALORNOVO® auxiliou a empresa a captar mais de 10 milhões em dinheiro de fundo perdido (subvenção econômica) junto a FINEP, com insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast41.jpg',
+    date: '09 dez 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 4: Inovação na IdeeLab Biotecnologia com Ronaldo Dálio e Gilson Manfio- parte 2',
+    description: 'Conheça a IdeeLab Biotecnologia e saiba com a VALORNOVO® auxiliou a empresa a captar mais de 10 milhões em dinheiro de fundo perdido (subvenção econômica) junto a FINEP, com insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast42.jpg',
+    date: '09 dez 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 4: Inovação na IdeeLab Biotecnologia com Ronaldo Dálio e Gilson Manfio- parte 3',
+    description: 'Conheça a IdeeLab Biotecnologia e saiba com a VALORNOVO® auxiliou a empresa a captar mais de 10 milhões em dinheiro de fundo perdido (subvenção econômica) junto a FINEP, com insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast43.jpg',
+    date: '09 dez 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 5: Captação FINEP com juros subsidiados para Crescimento do Negócio e Inovação.',
+    description: 'Descubra como promover o crescimento da sua empresa e aumentar a rentabilidade do seu negócio através de projetos de inovação desenvolvidos pela VALORNOVO®. Aprenda a acessar recursos subsidiados para impulsionar a captação de recursos para inovação. Com José Walter e Marcelo Correia, e insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast5.jpg',
+    date: '19 dez 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 6: Inovação na Santa Clara Agrociência com Vinicius Mazza e Giuliano Pauli',
+    description: 'Saiba como a Santa Clara Agrociência junto a VALORNOVO® está inovando no agronegócio com estratégias transformadoras. Entenda a transformação da agricultura sustentável através de bioinumos e biodefensivo agrícolas de 3ª (terceira) e 4 (quarta) geração. Com José Walter e insights inspiradores de Juliana Munaro.',
+    thumbnail: 'public/foto_podcast6.jpg',
+    date: '23 dez 2024',
+  },
+  {
+    type: 'podcast',
+    title: 'Podcast 7 VALORNOVO - Inovação que gera resultado: o que todo CEO (ou líder, gestor) precisa saber!',
+    description: 'Inovar é uma necessidade, mas como transformar a inovação em crescimento real? No Podcast VALORNOVO , os consultores Marcelo Alexandre e José Walter enfrentaram uma sabatina com Juliana Munaro para discutir inovação sob a ótica de resultados. Como os CEOs podem contribuir para a inovação sem comprometer a operação? Quais são os erros mais comuns ao inovar – e como evitá-los? O que diferencia empresas que inovam com impacto daquelas que ficam para trás?',
+    thumbnail: 'public/foto_podcast7.jpg',
+    date: '25 fev 2025',
   },
   {
     type: 'ebook',
@@ -26,20 +138,6 @@ const contentItems = [
     description: 'Um guia prático com metodologias ágeis e tradicionais para gerenciar projetos de inovação.',
     thumbnail: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop',
     date: '05 mar 2024',
-  },
-  {
-    type: 'video',
-    title: 'Webinar: Inovação como estratégia competitiva',
-    description: 'Como implementar a inovação como parte da estratégia competitiva de sua empresa.',
-    thumbnail: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=800&auto=format&fit=crop',
-    date: '18 fev 2024',
-  },
-  {
-    type: 'article',
-    title: 'Análise de viabilidade técnica e financeira',
-    description: 'Metodologias para análise de viabilidade de projetos de inovação.',
-    thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop',
-    date: '03 abr 2024',
   },
   {
     type: 'ebook',
@@ -52,9 +150,7 @@ const contentItems = [
 
 const getIcon = (type: string) => {
   switch (type) {
-    case 'video':
-      return Play;
-    case 'article':
+    case 'podcast':
       return FileText;
     case 'ebook':
       return BookOpen;
@@ -70,8 +166,7 @@ const ContentLibrary = () => {
     ? contentItems
     : contentItems.filter(item => {
         const categoryMap: Record<string, string> = {
-          'Vídeos': 'video',
-          'Artigos': 'article',
+          'Podcast': 'podcast',
           'E-books': 'ebook',
         };
         return item.type === categoryMap[activeCategory];
@@ -86,7 +181,7 @@ const ContentLibrary = () => {
             <p className="section-title-text">NOSSA BIBLIOTECA</p>
             <div className="section-title-line"></div>
           </div>
-          <h2 className="section-heading">Conteúdos Especializados para sua Jornada de Inovação</h2>
+          <h2 className="section-heading">Biblioteca de conteúdos</h2>
           <p className="text-valor-dark/80 max-w-2xl mx-auto">
             Acesse nossa biblioteca de conteúdos sobre inovação, captação de recursos e gestão de projetos, 
             criados por especialistas para auxiliar seu crescimento.
@@ -126,10 +221,10 @@ const ContentLibrary = () => {
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-valor-primary/80 to-transparent opacity-60"></div>
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-valor-primary px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                  {/* <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-valor-primary px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <Icon size={14} className="mr-1" />
                     <span className="capitalize">{item.type}</span>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="p-6">
                   <p className="text-valor-secondary text-sm mb-2">{item.date}</p>

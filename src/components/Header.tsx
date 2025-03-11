@@ -22,14 +22,12 @@ const Header = () => {
         'fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300',
         scrolled
           ? 'bg-white shadow-md py-2'
-          : 'bg-transparent py-4'
+          : 'bg-white py-4'
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="/" className="flex items-center space-x-2">
-          <span className="text-valor-primary font-heading font-bold text-xl tracking-tight">
-            Valor<span className="text-valor-secondary">Novo</span>
-          </span>
+          <img src="public/logo_type.svg" alt="" className="h-8 pt-2 pb-1"/>
         </a>
 
         {/* Desktop Navigation */}
@@ -40,7 +38,7 @@ const Header = () => {
               href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
               className={cn(
                 'text-base font-medium transition-colors',
-                scrolled ? 'text-valor-dark hover:text-valor-primary' : 'text-valor-light hover:text-valor-light/80'
+                scrolled ? 'text-valor-dark hover:text-valor-primary' : 'text-valor-dark hover:text-valor-light/80'
               )}
             >
               {item}

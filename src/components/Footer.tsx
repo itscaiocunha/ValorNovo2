@@ -1,4 +1,3 @@
-
 import { ArrowUp } from 'lucide-react';
 
 const Footer = () => {
@@ -16,9 +15,7 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <a href="/" className="flex items-center space-x-2">
-                <span className="font-heading font-bold text-2xl tracking-tight">
-                  Valor<span className="text-valor-accent">Novo</span>
-                </span>
+                <img src="public/logo_markbranco.png" alt="" />
               </a>
             </div>
             <p className="text-valor-light/80 mb-6">
@@ -30,7 +27,7 @@ const Footer = () => {
                 <a 
                   key={social}
                   href={`#${social}`} 
-                  className="w-8 h-8 rounded-full bg-valor-light/10 flex items-center justify-center text-valor-light hover:bg-valor-accent hover:text-valor-primary transition-colors"
+                  className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-valor-light hover:bg-valor-accent hover:text-valor-primary transition-colors"
                 >
                   <img 
                     src={`/${social}.svg`} 
@@ -63,10 +60,10 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 'Gestão de Inovação', 
-                'Captação de Recursos', 
+                'Captação de Recursos FINEP', 
                 'Gestão de Projetos', 
-                'Novos Negócios', 
-                'Análise de Viabilidade'
+                'Planejamento Estratégico', 
+                'Pesquisa Clínica'
               ].map((item) => (
                 <li key={item}>
                   <a 
@@ -88,10 +85,10 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                 </svg>
                 <a 
-                  href="mailto:zw@valornovo.com"
+                  href="mailto:projetos@valornovo.com"
                   className="text-valor-light/80 hover:text-valor-accent transition-colors"
                 >
-                  zw@valornovo.com
+                  projetos@valornovo.com
                 </a>
               </li>
               <li className="flex items-start">
@@ -99,7 +96,7 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                 </svg>
                 <a 
-                  href="tel:+5516981350708"
+                  href="tel:+551698135-0708"
                   className="text-valor-light/80 hover:text-valor-accent transition-colors"
                 >
                   (16) 98135-0708
@@ -111,7 +108,7 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>
                 <span className="text-valor-light/80">
-                  Região Sudeste, Brasil
+                  Rua Fernando Catapani, 71 – Centro – Cravinhos – São Paulo
                 </span>
               </li>
             </ul>

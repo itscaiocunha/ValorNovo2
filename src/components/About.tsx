@@ -2,15 +2,15 @@
 import { Award, Users, TrendingUp } from 'lucide-react';
 
 const stats = [
-  { value: '12+', label: 'Anos de Experiência' },
-  { value: '100+', label: 'Projetos Aprovados' },
-  { value: 'R$500M+', label: 'Em Captação de Recursos' },
+  { value: '+ 18', label: 'Anos de Experiência' },
+  { value: '+ 200', label: 'Projetos Aprovados' },
+  { value: '+ R$ 1Bi', label: 'Em Captação de Recursos' },
 ];
 
 const advantages = [
   {
     icon: Award,
-    title: 'Experiência em Gestão de Inovação',
+    title: 'Gestão de Inovação',
     description: 'Nossa equipe possui vasta experiência em desenvolvimento e implementação de estratégias de inovação para empresas de diversos segmentos.'
   },
   {
@@ -20,7 +20,7 @@ const advantages = [
   },
   {
     icon: Users,
-    title: 'Gestão Híbrida de Projetos',
+    title: 'Gestão de Projetos',
     description: 'Utilizamos metodologias ágeis e tradicionais para garantir a entrega de projetos complexos no prazo e dentro do orçamento.'
   },
 ];
@@ -37,15 +37,12 @@ const About = () => {
             </div>
             <h2 className="section-heading">Impulsionando a Inovação nas Empresas Brasileiras</h2>
             
-            <p className="text-valor-dark/80 mb-6 text-base">
-              A Valor Novo é uma consultoria especializada em gestão da inovação e captação de recursos para projetos de P&D. 
-              Nosso objetivo é auxiliar empresas a transformar ideias em projetos viáveis e rentáveis, através de estratégias eficientes 
-              e acesso a linhas de financiamento com condições diferenciadas.
+            <p className="text-valor-dark/80 mb-6 text-base text-justify">
+              VALORNOVO® possui um processo simplificado para fazer a Inovação acontecer. Há 18 anos desenvolvemos e validamos um PROCESSO DE INOVAÇÃO SIMPLIFICADO e EFICIENTE. Com o processo de inovação VALORNOVO® sua empresa terá maior assertividade na escolha e priorização dos projetos de desenvolvimento. 
             </p>
             
-            <p className="text-valor-dark/80 mb-8 text-base">
-              Trabalhamos com diretores e gerentes de P&D, inovação e finanças, oferecendo soluções personalizadas para 
-              impulsionar o crescimento e a competitividade através da inovação.
+            <p className="text-valor-dark/80 mb-8 text-base text-justify">
+              Além disso, na implementação deste processo, os TALKs (treinamentos periódicos) promovem a cultura de inovação enquanto os Comitês garantem a definição e manutenção da estratégia de inovação. Sua empresa ganha ritmo e um fluxo lógico de desenvolvimento de novos faturamentos, com indicadores e metas.
             </p>
             
             <div className="grid grid-cols-3 gap-4 mb-8">

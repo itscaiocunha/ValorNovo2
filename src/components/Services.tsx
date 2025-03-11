@@ -17,19 +17,13 @@ const services = [
   },
   {
     icon: ClipboardList,
-    title: 'Gestão Híbrida de Projetos',
+    title: 'Gestão de Projetos',
     description: 'Combinação de metodologias tradicionais e ágeis para gestão eficiente de projetos de inovação.',
     color: 'bg-purple-50 text-purple-600',
   },
   {
-    icon: BarChart4,
-    title: 'Desenvolvimento de Novos Negócios',
-    description: 'Apoio estratégico para desenvolvimento de novos produtos, serviços e modelos de negócio.',
-    color: 'bg-amber-50 text-amber-600',
-  },
-  {
     icon: PieChart,
-    title: 'Análise de Viabilidade',
+    title: 'Pesquisas Clínicas',
     description: 'Estudos aprofundados para análise de viabilidade técnica, econômica e financeira de projetos.',
     color: 'bg-red-50 text-red-600',
   },

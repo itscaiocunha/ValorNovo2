@@ -4,25 +4,25 @@ import { BarChart3, Users, GlobeIcon, Building2 } from 'lucide-react';
 const stats = [
   {
     icon: Users,
-    value: '200+',
+    value: '+ 200',
     label: 'Clientes Atendidos',
     description: 'Empresas que confiaram em nossos serviços'
   },
   {
     icon: Building2,
-    value: '50+',
+    value: '+ 50',
     label: 'Setores de Mercado',
     description: 'Experiência em diversos segmentos da indústria'
   },
   {
     icon: GlobeIcon,
-    value: '25+',
+    value: '+ 25',
     label: 'Cidades Brasileiras',
     description: 'Alcance nacional em diferentes regiões'
   },
   {
     icon: BarChart3,
-    value: 'R$ 500M+',
+    value: '+ R$ 1Bi',
     label: 'Recursos Captados',
     description: 'Capital para projetos de inovação'
   }
@@ -36,8 +36,9 @@ const CompanyStats = () => {
           <div className="section-title flex justify-center">
             <div className="section-title-line"></div>
             <p className="section-title-text">NOSSOS NÚMEROS</p>
+            <div className="section-title-line"></div>
           </div>
-          <h2 className="section-heading">Resultados que Falam por Si</h2>
+          <h2 className="section-heading">Nosso impacto em empresas como a sua</h2>
           <p className="text-valor-dark/70 max-w-3xl mx-auto">
             Nosso histórico de sucesso reflete o compromisso com a excelência e a entrega de valor real para nossos clientes.
           </p>

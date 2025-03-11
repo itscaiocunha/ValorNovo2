@@ -4,21 +4,22 @@ import { ArrowRight } from 'lucide-react';
 const Hero = () => {
   return (
     <section 
-      id="início" 
-      className="min-h-[80vh] relative flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: 'linear-gradient(to right, rgba(26, 54, 93, 0.95), rgba(26, 54, 93, 0.95)), url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2000&auto=format&fit=crop")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
+  id="início" 
+  className="min-h-[80vh] relative flex items-center justify-center overflow-hidden"
+  style={{
+    backgroundImage: 'linear-gradient(#134677CC , #134677CC), url("public/mesa_podcast.jpeg")',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}
+>
+
       <div className="section-container relative z-10 flex flex-col items-center text-center">
         <h1 className="text-valor-light mb-8 max-w-4xl font-heading">
-          Transformando Ideias em <span className="text-valor-accent">Projetos Inovadores</span> para Empresas
+          VALORNOVO® possui um processo simplificado para fazer acontecer.
         </h1>
         
         <p className="text-valor-light/90 text-lg max-w-2xl mb-10">
-          Consultoria especializada em captação de recursos e gestão de projetos de inovação, com foco em resultados sustentáveis para o seu negócio.
+          O processo de inovação VALORNOVO® traz mais assertividade, estratégia e cultura à sua empresa, com treinamentos, comitês e metas claras para desenvolver novos faturamentos.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6">
